@@ -27,6 +27,10 @@ namespace MvcStok.Controllers
         [HttpPost]
         public ActionResult MusteriEkle(TBLMUSTERILER p2)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("MusteriEkle");
+            }
             db.TBLMUSTERILER.Add(p2);
             db.SaveChanges();
             return RedirectToAction("Index");

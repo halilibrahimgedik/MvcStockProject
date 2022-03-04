@@ -1,18 +1,30 @@
-﻿
+﻿@model MvcStok.Models.EntityFramework.TBLMUSTERILER
+
 @{
     ViewBag.Title = "MusteriEkle";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
 <form class="form-group" method="post">
+    @*<div>
+            <label>Müşteri AD</label>
+            <input type="text" class="form-control" name="MUSTERIAD" />
+        </div>
+        <div style="margin-top:10px">
+            <label>Müşteri SOYAD</label>
+            <input type="text" class="form-control" name="MUSTERISOYAD" />
+        </div>*@
     <div>
         <label>Müşteri AD</label>
-        <input type="text" class="form-control" name="MUSTERIAD" />
+        @Html.TextBoxFor(m => m.MUSTERIAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MUSTERIAD, "", new { @style = "color:red" })
     </div>
-    <div style="margin-top:10px">
-        <label>Müşteri SOYAD</label>
-        <input type="text" class="form-control" name="MUSTERISOYAD" />
+    <br />
+    <div>
+        @Html.TextBoxFor(m => m.MUSTERISOYAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MUSTERISOYAD, "", new { @style = "color:red" })
     </div>
+
     <div style="margin-top:12px">
         <button class="btn btn-info">Yeni Müşteri Ekle</button>
     </div>
