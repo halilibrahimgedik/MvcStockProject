@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
->
+
 <table class="table table-bordered">
     <tr>
         <th>Müşteri ID</th>
@@ -22,7 +22,7 @@
                 <td>@item.MUSTERIAD</td>
                 <td>@item.MUSTERISOYAD</td>
                 <td> <a href="/MUSTERI/Sil/@item.MUSTERIID" class="btn btn-danger">SİL</a></td>
-                <td> <a href="/MUSTERI/Guncelle/@item.MUSTERIID" class="btn btn-success">GÜNCELLE</a></td>
+                <td> <a href="/MUSTERI/MusteriGetir/@item.MUSTERIID" class="btn btn-success">GÜNCELLE</a></td>
             </tr>
         }
     </tbody>
