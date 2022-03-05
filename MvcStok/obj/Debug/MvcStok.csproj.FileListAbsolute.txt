@@ -164,3 +164,7 @@ C:\Users\Halil Gedik\Desktop\C# Uygulamalı Çalışmalar\Mvc Studies\MvcStok\ob
 C:\Users\Halil Gedik\Desktop\C# Uygulamalı Çalışmalar\Mvc Studies\MvcStok\obj\Debug\MvcStok.csproj.CopyComplete
 C:\Users\Halil Gedik\Desktop\C# Uygulamalı Çalışmalar\Mvc Studies\MvcStok\obj\Debug\MvcStok.dll
 C:\Users\Halil Gedik\Desktop\C# Uygulamalı Çalışmalar\Mvc Studies\MvcStok\obj\Debug\MvcStok.pdb
+C:\Users\Halil Gedik\Desktop\C# Uygulamalı Çalışmalar\Mvc Studies\MvcStok\bin\PagedList.dll
+C:\Users\Halil Gedik\Desktop\C# Uygulamalı Çalışmalar\Mvc Studies\MvcStok\bin\PagedList.Mvc.dll
+C:\Users\Halil Gedik\Desktop\C# Uygulamalı Çalışmalar\Mvc Studies\MvcStok\bin\PagedList.xml
+C:\Users\Halil Gedik\Desktop\C# Uygulamalı Çalışmalar\Mvc Studies\MvcStok\bin\PagedList.Mvc.xml
