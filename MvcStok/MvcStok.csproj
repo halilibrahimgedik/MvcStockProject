@@ -229,6 +229,7 @@
     <Content Include="Views\Urun\UrunEkle.cshtml" />
     <Content Include="Views\Kategori\KategoriGetir.cshtml" />
     <Content Include="Views\Musteri\MusteriGetir.cshtml" />
+    <Content Include="Views\Urun\UrunGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
