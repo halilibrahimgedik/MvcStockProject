@@ -5,6 +5,14 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+@using (Html.BeginForm("Index", "Urun", FormMethod.Get))
+{
+    <p>
+        <strong>Aranacak Ürün Adı:</strong> @Html.TextBox("p")
+        <input type="submit" values="Ara" />
+    </p>
+}
+
 <table class="table table-hover">
     <tr>
         <th>Ürün ID</th>
@@ -19,16 +27,16 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <th>@item.URUNID</th>
-            <td>@item.URUNAD</td>
-            <td>@item.MARKA</td>
-            <td>@item.TBLKATEGORILER.KATEGORIAD</td>
-            <td>@item.FIYAT</td>
-            <td>@item.STOK</td>
-            <td> <a href="/URUN/Sil/@item.URUNID" class="btn btn-danger">SİL</a></td>
-            <td> <a href="/URUN/UrunGetir/@item.URUNID" class="btn btn-success">GÜNCELLE</a></td>
-        </tr>
+            <tr>
+                <th>@item.URUNID</th>
+                <td>@item.URUNAD</td>
+                <td>@item.MARKA</td>
+                <td>@item.TBLKATEGORILER.KATEGORIAD</td>
+                <td>@item.FIYAT</td>
+                <td>@item.STOK</td>
+                <td> <a href="/URUN/Sil/@item.URUNID" class="btn btn-danger">SİL</a></td>
+                <td> <a href="/URUN/UrunGetir/@item.URUNID" class="btn btn-success">GÜNCELLE</a></td>
+            </tr>
         }
     </tbody>
 </table>

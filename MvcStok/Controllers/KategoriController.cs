@@ -22,6 +22,16 @@ namespace MvcStok.Controllers
             return View(degerler);
         }
 
+        public ActionResult Index2(string p)
+        {
+            var degerler = from d in db.TBLKATEGORILER select d;
+            if (!string.IsNullOrEmpty(p))
+            {
+                degerler = degerler.Where(m => m.KATEGORIAD.Contains(p));
+            }
+            return View(degerler.ToList());
+        }
+
         [HttpGet]
         public ActionResult YeniKategori()
         {

@@ -12,10 +12,17 @@ namespace MvcStok.Controllers
         // GET: Urun
 
         MvcDbStokEntities db = new MvcDbStokEntities();
-        public ActionResult Index()
+        public ActionResult Index(string p)
         {
-            var degerler = db.TBLURUNLER.ToList();
-            return View(degerler);
+            var degerler = from d in db.TBLURUNLER select d;
+            if (!string.IsNullOrEmpty(p))
+            {
+                degerler = degerler.Where(m => m.URUNAD.Contains(p));
+            }
+            return View(degerler.ToList());
+
+            //var degerler = db.TBLURUNLER.ToList();
+            //return View(degerler);
         }
 
         [HttpGet]

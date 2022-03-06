@@ -5,6 +5,14 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+@using (Html.BeginForm("Index", "Musteri", FormMethod.Get))
+{
+    <p>
+        <strong>Aranacak Müşteri Adı:</strong> @Html.TextBox("p")
+        <input type="submit" values="Ara"/>
+    </p>
+}
+
 
 <table class="table table-bordered">
     <tr>
@@ -12,7 +20,7 @@
         <th>Müşteri AD</th>
         <th>Müşteri Soyad</th>
         <th>Sil</th>
-        <th>Güncelle</th> 
+        <th>Güncelle</th>
     </tr>
     <tbody>
         @foreach (var item in Model)

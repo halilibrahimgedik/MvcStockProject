@@ -1,4 +1,5 @@
-﻿
+﻿@model MvcStok.Models.EntityFramework.TBLSATISLAR
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -7,36 +8,41 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
     Satış Yap
 </button>
+
 <div class="modal" id="Modal1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title">Satış Yapma Ekranı</h2>
             </div>
-            <form>
+
+            <form method="post" action="/Satis/YeniSatis">
                 <div class="modal-body">
                     <label>
                         Ürün Adı
                     </label>
-                    <input type="text" name="Urun" class="form-control" />
-                    <br />
-                    <label>
-                        Ürün Markası
-                    </label>
-                    <input type="text" name="Marka" class="form-control" />
+                    @Html.TextBoxFor(m => m.URUN, new { @class = "form-control" })
                     <br />
                     <label>
                         Müşteri Adı Soyadı
                     </label>
-                    <input type="text" name="musteri" class="form-control" />
+                    @Html.TextBoxFor(m => m.MUSTERI, new { @class = "form-control" })
                     <br />
                     <label>
-                        Müşteri Tel No:
+                        Adet
                     </label>
-                    <input type="text" name="telefon" class="form-control" />
+                    @Html.TextBoxFor(m => m.ADET, new { @class = "form-control" })
+                    <br />
+                    <label>
+                        Fiyat
+                    </label>
+                    @Html.TextBoxFor(m => m.FIYAT, new { @class = "form-control" })
                     <br />
                     <button type="button" class="btn btn-info">
-                        Verileri Kaydet
+                        Satış İşlemini Yap
+                    </button>
+                    <button type="submit" class="btn btn-danger" data-dismiss="modal">
+                        Vazgeç
                     </button>
                 </div>
             </form>
